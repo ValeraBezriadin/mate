@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::after,
+*::after {
+  box-sizing: border-box;
+}
+ol,
+ul,
+menu {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  color: var(--text-color);
+}
+.container {
+  max-width: 1380px;
+  width: 100%;
+  padding: 0 70px;
+  margin: 0px auto;
+}
+:root{
+  /* font-weight */
+  --title-font:800;
+  --text-font:400;
+  /* text sizes */
+  --title:48px;
+  --title-sub:24px;
+  --text:16px;
+
+  /* colors */
+  --text-color: #292929;
+  --background-menu:#E8EFF9;
+}
+@media screen and (max-width:768px){
+  .container {
+   
+    padding: 40px;
+    
+  }
+  :root{
+    /* text sizes */
+  --title:36px;
+  --title-sub:20px;
+  --text:14px;
+  }
+}
+@media screen and (max-width:520px){
+  .container {
+   
+    padding: 0 25px;
+    
+  }
+  :root{
+    /* text sizes */
+  --title:32px;
+  --title-sub:18px;
+  --text:12px;
+  }
+}
+  
+
+
+/* header */
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding-top: 60px ;
+  padding-bottom: 40px;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center ;
+  
+}
+ /* nav */
+.nav__inner{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__menu{
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+
+/* hero */
+.hero__title{
+
+  font-size: var(--title);
+  font-weight: var(--text-font);
+  letter-spacing: -1.5px;
+}
+.hero__img{
+  margin-bottom: 40px;
+}
+
+  /* menu */
+.menu{
+  
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 500ms;
+  height: 100vh;
+  padding-top: 60px;
+  background-color: var(--background-menu);
+  
+}
+.menu:target{
+  transform: translateX(-0%);
+}
+.menu__innner{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+.menu__close{
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+.menu__list{
+  display: flex;
+  flex-direction:column ;
+  gap: 30px;
+}
+.menu__item{
+  font-size: var(--title-sub);
+}
+
+ /* recomended */
+ .recomended{
+  padding-top: 120px;
+  background-color: #FFFFFF;
+ }
+.recomended__title{
+  font-size: var(--title);
+  text-align: center;
+  margin-bottom: 65px;
+}
+.recomended__list{
+ display: flex;
+ gap: 25px;
+ justify-content: space-between;
+}
+.recomended__img{
+  display: block;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.recomended__subtitle{
+  margin-bottom: 10px;
+  font-size: var(--text);
+  display: block;
+}
+.recomended__text{
+  margin-bottom: 10px;
+  font-size: var(--text);
+  font-weight: 400px;
+  display: block;
+}
+.recomended__price{
+  display: block;
+  font-size: var(--text);
+}
+@media screen and (max-width:768px){
+  .recomended__list{
+    flex-direction: column;
+    align-items: center;
+  }
+  .recomended__img{
+    width: 80%;
+  }
+  .recomended__item{
+    width: 40%;
+  }
+}
+@media screen and (max-width:520px){
+  .recomended__item{
+    width: 55%;
+  }
+}
+
+ /* categories */
+ .categories{
+  padding-top: 120px;
+  background-color: #FFFFFF;
+ }
+ .categories__tile{
+  text-align: center;
+  font-size: var(--title);
+  margin-bottom: 65px;
+  
+ }
+ .categorie{
+  display: flex;
+  gap: 1%;
+  margin-bottom: 15px;
+ }
+ .categori__photo-wide{
+ width: 67%;
+ }
+ .categori__photo-short{
+ width: 33%;
+ }
+ .categorie__subtitle{
+  margin-bottom: 65px;
+ }
+  /* about */
+.about{
+  padding-top: 120px;
+  background-color: #FFFFFF;
+}
+.about__title{
+  font-size: var(--title);
+}
+.about__wrapper{
+  display: flex;
+  gap: 20px;
+  padding-bottom: 120px;
+  justify-content: space-between;
+}
+.about__item{
+  margin-bottom: 15px;
+
+}
+.about__item:last-child{
+  margin-bottom: 40px;
+}
+.about__text{
+    font-weight: 400;
+}
+.about__text{
+  max-width: 500px;
+  width: 100%;
+}
+@media screen and (max-width:520px){
+  .about__wrapper{
+    flex-direction: column;
+  }
+}
+/* footer */
+.footer{
+  background-image: url(./static/categories/foooter.png);
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
+  height: 460px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
