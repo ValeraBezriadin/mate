@@ -72,6 +72,7 @@ body {
 
 /* header */
 .header{
+  background-image: url(./static/background.png);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -104,6 +105,11 @@ body {
 }
 .hero__img{
   margin-bottom: 40px;
+}
+@media screen and (max-width:520px){
+  .header{
+    background-image: url(./static/bk1.png);
+  }
 }
 
   /* menu */
